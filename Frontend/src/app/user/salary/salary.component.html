@@ -1,0 +1,65 @@
+
+<!-- <table class="table" >
+  <thead>
+    <tr>
+      <th scope="col"> EmpName</th>
+      <th scope="col">Date</th>
+      <th scope="col">No.of.Days</th>
+      <th scope="col">Reason</th>
+      <th scope="col">Detuction</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let e of items">
+      <th scope="row"></th>
+      <td>Mark</td>
+      <td>{{e.detuction}} </td>
+      <td>@mdo</td>
+    </tr>
+
+  </tbody>
+</table>  -->
+
+
+<div class="outer">
+  <h1 style="font-weight: bold; margin-top: 20px;">Salary Slip</h1>
+<form  #form ="ngForm" (ngSubmit)="submit()" style="margin-top:30px ;margin-bottom: 30px;">
+
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" placeholder="Employee Id" [(ngModel)]="id" name="id" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Button</button>
+    </div>
+
+</form>
+
+<div class="sal">
+<div> Salary  <span> {{payrollres.salary}} </span></div>
+<div> Total Deduction <span> {{payrollres.detuction}}</span></div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">No.of.Days</th>
+      <th scope="col">Reason</th>
+      <th scope="col">Deduction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let e of items" >
+   
+      <tr *ngIf="e.status==1 && e.e_id==id">
+      <td>{{ e.empname}}</td>
+      <td>{{ e.from_date}}</td>
+      <td>{{ e.leaves}}</td>
+      <td>{{e.reason}}</td>
+      <td>{{ e.detuction}}</td>
+    </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+</div>

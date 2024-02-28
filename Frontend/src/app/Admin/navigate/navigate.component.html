@@ -1,0 +1,71 @@
+<!-- <div class="outer">
+ <p-tabView>
+    
+    <p-tabPanel header="Header I">
+           <app-list></app-list>
+    </p-tabPanel>
+
+    <p-tabPanel header="Header II">
+        <app-request></app-request>
+    </p-tabPanel>
+
+</p-tabView> 
+
+</div> -->  
+
+
+<nav class="navbar bg-body-tertiary bg-dark top " style="width:98.5%" >
+
+      <div class="container-fluid bg-dark d-flex  " >
+    
+
+
+      <span class="navbar-brand mb-0 h1 text-white text-start col-xl-2 pay " >PayRoll Management</span>
+ 
+      
+      <div class="  col-xl-4  d-flex  justify-content-between link ml-auto">
+         <li class="nav-item mb-3">
+          <p  (click)="ListMehtod()"  class="text-white">List</p>
+        </li>
+        <li class="nav-item">
+
+            <p (click)="CreateMehtod()" class="text-white">Create</p>
+          </li>
+          <li class="nav-item">
+
+            <p (click)="requestMehtod()"  class="text-white">Requests</p>
+          </li>
+
+          <li class="nav-item">
+
+            <p (click)="logout()"  class="text-white">Logout</p>
+          </li>
+         
+         
+            
+
+     
+      </div>
+    </div>
+</nav>
+
+<div >
+
+<div class="calling" class="display"  *ngIf="this.create">
+    <app-create></app-create>
+
+</div> 
+
+
+<div class="calling" class="display" *ngIf="this.list">
+    <app-list ></app-list>
+
+</div>
+
+
+<div class="calling" class="display" *ngIf="this.requests">
+    <app-request></app-request>
+
+</div> 
+
+</div>

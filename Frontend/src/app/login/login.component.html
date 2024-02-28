@@ -1,0 +1,88 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="outer-container">
+            <div class="logo">
+                <h1>Welcome Back!</h1>
+                <img src="https://www.iinterchange.com/wp-content/uploads/io-iinterchange-logo.svg" alt="" style="height: 30%;">
+                <p style="text-align: center;"> Enter your personal details to use all of site features </p>
+            </div>
+
+            <div class="employee" *ngIf="!show">
+                    <h1>Employee Login</h1>
+                    <input type="text" placeholder="Username" [(ngModel)]="username">
+                    <input type="password" placeholder="Password" style="margin-bottom:10px" [(ngModel)]="password">
+                    <p (click)="display()" >Admin Login</p>
+                    <p-button label="Submit" (onClick)="submit()" ></p-button>
+            </div>
+
+            <div class="admin" *ngIf="show">
+                <h1>Admin Login</h1>
+                <input type="text" placeholder="Username" [(ngModel)]="username">
+                <input type="password" placeholder="Password" style="margin-bottom:10px" [(ngModel)]="password">
+                <p (click)="displayEmp()" >Employee Login</p>
+                <p-button label="Submit" (onClick)="submit()" ></p-button>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+  
+  
+</body>
+</html> -->
+
+
+    <div class="whole">
+
+        <div class="outer-container">
+        <div class="logo">
+            <h1>Welcome Back!</h1>
+            <img src="https://www.iinterchange.com/wp-content/uploads/io-iinterchange-logo.svg" alt="" style="height: 30%;">
+            <p style="text-align: center;"> Enter your personal details to use all of site features </p>
+        </div>
+        <div class="employee" *ngIf="!show">
+                 <h1>Employee Login</h1>
+                <input type="text" placeholder="Username" [(ngModel)]="empname">
+                <input type="password" placeholder="Password" style="margin-bottom:10px" [(ngModel)]="emppass">
+                <p class="box" (click)="display()"  style="color:white;">Admin Login</p>
+                <p-button label="Submit" (onClick)="empsubmit()" ></p-button>
+        
+        </div>
+
+
+
+
+        <div class="admin" *ngIf="show">
+            <h1>Admin Login</h1>
+           
+            <input type="text" placeholder="Username" name="adminname"  ngModel [(ngModel)]="username">
+            <input type="password" placeholder="Password"  name="adminpass" style="margin-bottom:10px" ngModel [(ngModel)]="password">
+            <p (click)="displayEmp()" >Employee Login</p>
+            <p-button label="Submit" (onClick)="submit()" ></p-button>
+ 
+        </div> 
+
+
+
+    </div>
+
+    </div>
+
+     
+
+  
+  

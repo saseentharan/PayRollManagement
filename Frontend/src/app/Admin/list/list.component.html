@@ -1,0 +1,43 @@
+<div class="outer"><br>
+<h1 style="text-align: center;width:200px margin-left ;margin-top:50px;">List of Employees</h1>
+<p-table [value]="payrollItems" [tableStyle]="{ 'min-width': '50rem' , 'width':'500px','height':'100px' }" border:2px>
+    <ng-template pTemplate="header">
+
+
+         <tr>
+            <th pSortableColumn="id" style="width:20%;background-color: 'transparent';">Id <p-sortIcon field="p_id"></p-sortIcon></th>
+            <th pSortableColumn="empName" style="width:20%">Name <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="dob" style="width:20%">DOB <p-sortIcon field="category"></p-sortIcon></th>
+            <th pSortableColumn="accNo" style="width:20%">Account No <p-sortIcon field="quantity"></p-sortIcon></th>
+            <th pSortableColumn="leave" style="width:20%">Leave days </th>
+            <th pSortableColumn="detuction" style="width:20%">Deduction </th>
+            <th pSortableColumn="salary" style="width:20%">Salary </th>
+            <th pSortableColumn="salary" style="width:20%">UserName </th>
+            <th pSortableColumn="salary" style="width:20%">Password </th>
+            <th pSortableColumn="salary" style="width:20% ;text-align: center;" colspan="2" > Operations</th>
+        </tr>
+
+     
+    </ng-template>
+    <ng-template pTemplate="body" let-p>
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.empName }}</td>
+            <td>{{ p.dob| date:'yyy-MM-dd'}}</td>
+            <td>{{ p.accNo }}</td>
+            <td>{{ p.leave }}</td>
+            <td>{{ p.detuction }}</td>
+            <td>{{ p.salary }}</td>
+            <td>{{p.username}}</td>
+            <td>{{p.pass}}</td>
+       
+                 <td> <p-button label="Edit" [routerLink]="['/edit',p.id ]"></p-button></td>
+          <td>  <p-button label="Delete" severity="danger" (click)= "deleteEmployee(p.id)"></p-button></td>
+        </tr>
+    </ng-template>
+</p-table>
+</div>
+
+
+
+

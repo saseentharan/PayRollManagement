@@ -1,0 +1,66 @@
+<div class="outer">
+  <h1>Leave Status</h1>
+<table mat-table [dataSource]="items" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="empname">
+      <th mat-header-cell *matHeaderCellDef> EmpName </th>
+      <td mat-cell *matCellDef="let element"> {{element.empname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> From Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.from_date}} </td>
+    </ng-container>
+  
+    
+ 
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> To Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.to_date}} </td>
+    </ng-container>
+  
+  
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> No.Of.Days </th>
+      <td mat-cell *matCellDef="let element"> {{element.leaves}} </td>
+    </ng-container>
+
+      <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Reason </th>
+      <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element">
+        <ng-container *ngIf="element.status == 0; else acceptedOrRejected">
+          <span class="material-symbols-outlined" style="color:rgb(193, 205, 18)">
+            pending_actions
+            </span>
+        </ng-container>
+        <ng-template #acceptedOrRejected>
+          <ng-container *ngIf="element.status == 1">
+            <div>
+            <span class="material-symbols-outlined" style="color: green;">
+              done
+              </span> </div>
+          </ng-container>
+          <ng-container *ngIf="element.status == 2">
+            <div>
+            <span class="material-symbols-outlined" style="color:red">
+              close
+              </span></div>
+          </ng-container>
+        </ng-template>
+      </td>
+   
+
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+   
+ 
+  

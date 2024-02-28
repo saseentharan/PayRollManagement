@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid{
+    height: 50px;
+}
+
+
+p:hover{
+    color:rgb(219, 219, 219) !important;
+}
+
+.pay{
+    margin-left:40px;
+    margin-bottom: 10px !important; 
+}
+
+p{
+    margin-right:80px;
+    font-size: 18px;
+}
+
+.display{
+    height: 90vh;
+    width:98%;
+    overflow: hidden;
+
+    margin-left: 7px;
+}
+
+
+.top{
+    margin-top:-20px;
+}

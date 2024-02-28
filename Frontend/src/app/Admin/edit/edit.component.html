@@ -1,0 +1,96 @@
+<!-- <div class="angform">
+
+
+    <form class="fm" #form ="ngForm" (ngSubmit)="updateHouse()">
+
+        <div class="emp" style="margin-left:35%  ; font-size: 20px;">Edit Employee</div>
+
+        <div >
+            <label>Emp Id</label>
+            <input type="text" class="form-control" id="id" name="id" [(ngModel)]="editEmp.id"  />
+        </div>
+        
+        <div>
+            <label>Employee Name</label>
+            <input type="text" class="form-control" id="empName" name="empName" #empname="ngModel" required pattern="[a-zA-Z]+"   [(ngModel)]="editEmp.empName" style="margin-left:20px"/> 
+            <span *ngIf="empname.invalid && empname.touched">* Enter a valid details</span>
+        
+        </div>
+        
+        <div>
+            <label>DOB</label>
+            <input type="date" class="form-control" id="dob" name="dob"   #dob="ngModel" required  [(ngModel)]="editEmp.dob"  style="margin-left:110px"/>
+
+        </div>
+        
+        <div>
+            <label >Account Number</label>
+            <input type="number" class="form-control" id="accNo" name="accNo"  #accountnumber="ngModel" required pattern="[0-9]{10}" [max]="999999999999" [min]="1" [(ngModel)]="editEmp.accNo" style="margin-left:15px"/>
+            <span *ngIf="accountnumber.invalid && accountnumber.touched">Enter a valid details</span>
+        </div>
+   
+        <div>
+            <label>UserName</label>
+            <input type="text"  class="form-control" name="username" #user="ngModel" required [(ngModel)]="editEmp.username" style="margin-left:65px" />
+            <span *ngIf="user.invalid && user.touched">Enter a valid details</span>
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input type="text"  class="form-control"  name="pass" #pass="ngModel" required pattern="^(?=.*[!@#$%^&*()])(?=.*[a-zA-Z0-9]).{8,}$" maxlength="8" [minLength]="3"  [(ngModel)]="editEmp.pass" style="margin-left:65px" />
+            <span *ngIf="pass.invalid && pass.touched">* required one special character and max length of 8</span>
+        </div>
+
+
+        <div class="butt">
+            <p-button label="Save" severity="primary" type="ngSubmit"></p-button>
+
+        </div>
+
+        </form>
+</div>
+ -->
+
+ 
+
+
+<div class="angform" >
+   
+    <form class="fm" #form ="ngForm" (ngSubmit)="updateHouse()" >
+    <div class="emp" style="margin-left:35%  ; font-size: 20px;">Edit Employee</div>
+    <div>
+        <label>Employee Name</label>
+        <input type="text" class="form-control" id="empName" name="empName" #empname="ngModel" required pattern="[a-zA-Z]+"   [(ngModel)]="editEmp.empName" style="margin-left: 45px;" /> 
+    </div>
+    <span *ngIf="empname.invalid && empname.touched" style="text-align: end; width:80%; ">*  Enter a valid details</span>
+    
+    <div style="text-algin:left">   
+        <label>DOB</label>
+        <input type="date" class="form-control" id="dob" name="dob"   #dob="ngModel" required  [(ngModel)]="editEmp.dob" style="margin-left: 120px;" />
+    </div>
+    
+    <div>
+        <label >Account Number</label>
+        <input type="number" class="form-control" id="accNo" name="accNo"  #accountnumber="ngModel" required pattern="[0-9]{10}" [max]="999999999999" [min]="1" [(ngModel)]="editEmp.accNo" style="margin-left: 40px;" />
+    </div>
+    <span *ngIf="accountnumber.invalid && accountnumber.touched">* Enter a valid details</span>
+
+
+    <div>
+        <label>UserName</label>
+        <input type="text"  class="form-control" name="username" #user="ngModel" required [(ngModel)]="editEmp.username" style="margin-left: 80px;" >
+    </div>
+    <span *ngIf="user.invalid && user.touched">* Enter a valid details</span>
+
+
+    <div>
+        <label>Password</label>
+        <input type="text"  class="form-control"  name="pass" #pass="ngModel" required pattern="^(?=.*[!@#$%^&*()])(?=.*[a-zA-Z0-9]).{8,}$" maxlength="8" [minLength]="3"  [(ngModel)]="editEmp.pass" style="margin-left: 80px;" />
+    </div>
+    <span *ngIf="pass.invalid && pass.touched">* Required one special character and max length of 8</span>
+
+
+    <button [disabled]="form.invalid"   class="bg-info" type="ngSubmit" style="width:50px; height: 30px;margin-left:40%; background: linear-gradient(#62cff4,#2c67f2);">Save</button>
+
+</form>
+</div>

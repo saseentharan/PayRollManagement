@@ -1,0 +1,53 @@
+
+
+<nav class="navbar bg-body-tertiary bg-dark top " style="width:98.5%" >
+
+    <div class="container-fluid bg-dark d-flex  " >
+  
+
+    <span class="navbar-brand mb-0 h1 text-white text-start col-xl-2 pay " >PayRoll Management</span>
+
+    
+    <div class="  col-xl-4  d-flex  justify-content-between link ml-auto">
+       <li class="nav-item mb-3">
+        <p  (click)="leaveMehtod()"  class="text-white">Leave</p>
+      </li>
+      <li class="nav-item">
+
+          <p (click)="statusMehtod()" class="text-white">Status</p>
+        </li>
+        <li class="nav-item">
+
+          <p (click)="salaryMehtod()"  class="text-white">Salary</p>
+        </li>
+
+        <li class="nav-item">
+
+          <p (click)="logout()"  class="text-white">Logout</p>
+        </li>
+
+   
+    </div>
+  </div>
+</nav>
+
+<div >
+
+<div class="calling" class="display"  *ngIf="this.leave">
+ <app-leave></app-leave>
+
+</div> 
+
+
+<div class="calling" class="display" *ngIf="this.status">
+  <app-status></app-status>
+
+</div>
+
+
+<div class="calling" class="display" *ngIf="this.salary">
+<app-salary></app-salary>
+
+</div> 
+
+</div>

@@ -1,0 +1,30 @@
+
+
+.outer{
+    height:95vh;
+    background: linear-gradient(89.6deg, rgb(254, 255, 194) -0.1%, rgb(255, 210, 165) 37.7%, rgb(211, 140, 173) 101%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -30px;
+
+}
+
+ table{
+    width:200px !important;
+   
+ }
+ th{
+    background-color:black;
+    color:white;
+    border-left: 1px solid white;
+ }
+
+ th:hover{
+            color:gray;
+ }
+
+ td{
+    border-bottom: 1px solid rgb(58, 54, 54,0.5);
+ }
